@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "日本人は、どう政治を選んできたか — 衆議院選挙シリーズのハブ",
+  "description": "日本人は、どう政治を選んできたか — 国政選挙シリーズのハブ",
   "license": "MIT",
   "engines": {
     "node": ">=22.18"

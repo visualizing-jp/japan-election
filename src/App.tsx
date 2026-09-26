@@ -40,7 +40,7 @@ export function App() {
 
         <footer className="flex flex-col gap-2 pt-6 pb-24 text-[11px] leading-loose tracking-[0.06em] text-muted">
           <p>
-            衆議院議員総選挙の記録をもとにしたシリーズのハブです。各ページは独立したサイトです。
+            国政選挙の記録をもとにしたシリーズのハブです。各ページは独立したサイトです。
           </p>
           <p>
             出典: 総務省「衆議院議員総選挙・最高裁判所裁判官国民審査結果調」ほか。
@@ -75,7 +75,7 @@ function SideTitle() {
         どう政治を選んできたか
       </h1>
       <p className="vertical pt-32 font-serif text-[15px] leading-[2] tracking-[0.18em] text-muted">
-        衆議院選挙の記録でたどる、長期の変化。
+        国政選挙の記録でたどる、長期の変化。
       </p>
       <a
         href={VISUALIZING_URL}
@@ -107,7 +107,7 @@ function MobileTitle() {
         選んできたか
       </h1>
       <p className="font-serif text-[14px] leading-loose tracking-[0.12em] text-muted">
-        衆議院選挙の記録でたどる、長期の変化。
+        国政選挙の記録でたどる、長期の変化。
       </p>
     </header>
   );
