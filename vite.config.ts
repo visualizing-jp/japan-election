@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  // カスタムドメイン election-shugiin.visualizing.jp はサイトのルート。
+  // カスタムドメイン japan-election.visualizing.jp はサイトのルート。
   base: "/",
   build: { outDir: "dist", assetsDir: "assets" },
 });
