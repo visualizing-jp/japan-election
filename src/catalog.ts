@@ -3,9 +3,10 @@
  *
  * 院ごとに領域を分ける。
  * 衆議院: 公開 URL は election-shugiin-{slug}.visualizing.jp、ローカル作業ディレクトリは ../shugiin-{slug}/。
+ * 参議院: 公開 URL は election-sangiin-{slug}.visualizing.jp、ローカル作業ディレクトリは ../sangiin-{slug}/。
  */
 
-export type CategoryId = "shugiin";
+export type CategoryId = "shugiin" | "sangiin";
 
 export type ProjectStatus = "published" | "pending";
 
@@ -22,6 +23,7 @@ export type CatalogEntry = {
 
 export const CATEGORIES: { id: CategoryId; label: string }[] = [
   { id: "shugiin", label: "衆議院" },
+  { id: "sangiin", label: "参議院" },
 ];
 
 export const CATALOG: CatalogEntry[] = [
@@ -64,6 +66,48 @@ export const CATALOG: CatalogEntry[] = [
     category: "shugiin",
     status: "published",
     url: "https://election-shugiin-seats.visualizing.jp/",
+    art: "/art/seats.svg",
+  },
+
+  // —— 参議院 ——
+  {
+    slug: "turnout",
+    title: "参議院選挙で、どれだけの人が投票したか",
+    source: "総務省 結果調ほか",
+    period: "1947–2025",
+    category: "sangiin",
+    status: "pending",
+    url: "https://election-sangiin-turnout.visualizing.jp/",
+    art: "/art/turnout.svg",
+  },
+  {
+    slug: "timeseries",
+    title: "参議院選挙で、どの党がどれだけ票を得てきたか",
+    source: "総務省 結果調",
+    period: "2001–2025",
+    category: "sangiin",
+    status: "pending",
+    url: "https://election-sangiin-timeseries.visualizing.jp/",
+    art: "/art/timeseries.svg",
+  },
+  {
+    slug: "candidates",
+    title: "参議院選挙で、誰が立候補し、誰が当選したか",
+    source: "総務省 結果調",
+    period: "2001–2025",
+    category: "sangiin",
+    status: "pending",
+    url: "https://election-sangiin-candidates.visualizing.jp/",
+    art: "/art/candidates.svg",
+  },
+  {
+    slug: "seats",
+    title: "参議院選挙で、得た票はどれだけ議席になったか",
+    source: "総務省 結果調",
+    period: "2001–2025",
+    category: "sangiin",
+    status: "pending",
+    url: "https://election-sangiin-seats.visualizing.jp/",
     art: "/art/seats.svg",
   },
 ];
