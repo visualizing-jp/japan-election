@@ -1,8 +1,8 @@
 /**
- * Google Analytics 4。空のあいだは計測しない（シリーズの各サイトと同じ運用）。
+ * Google Analytics 4。シリーズ共通プロパティ（シリーズの各サイトと同じ測定ID）。
  */
 
-const MEASUREMENT_ID: string = "";
+const MEASUREMENT_ID: string = "G-TQRNG44RDM";
 
 declare global {
   interface Window {
