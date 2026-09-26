@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 800 500"><defs><pattern id="hs" patternUnits="userSpaceOnUse" width="10" height="10"><path d="M0 5H10" style="stroke:#2B2B29;stroke-width:1.6"></path></pattern></defs><rect width="800" height="500" fill="#EDEDEA"></rect><g style="fill:none;stroke:#2B2B29;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round">
+<rect x="210" y="240" width="72" height="120" style="fill:url(#hs)"></rect><rect x="202" y="291" width="88" height="18" style="fill:#EDEDEA"></rect>
+<rect x="314" y="150" width="72" height="210" style="fill:url(#hs)"></rect><rect x="306" y="246" width="88" height="18" style="fill:#EDEDEA;stroke:#C8412F"></rect>
+<rect x="418" y="286" width="72" height="74" style="fill:url(#hs)"></rect><rect x="410" y="314" width="88" height="18" style="fill:#EDEDEA"></rect>
+<rect x="522" y="318" width="72" height="42" style="fill:url(#hs)"></rect><rect x="514" y="330" width="88" height="18" style="fill:#EDEDEA"></rect>
+<path d="M160 360H640V376H160Z" style="fill:#EDEDEA"></path>
+<path d="M192 376L178 440M608 376L622 440"></path>
+<path d="M120 440H680"></path>
+</g></svg>
