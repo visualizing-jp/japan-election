@@ -1,5 +1,20 @@
+import {
+  ArrowRightLeft,
+  ChartColumn,
+  Percent,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
 import { CATALOG, CATEGORIES, type CatalogEntry } from "./catalog.ts";
 import { VISUALIZING_URL, VisualizingMark } from "./Brand.tsx";
+
+/** 院をまたいで同じ題材には同じ線アイコンを置く。 */
+const MARKS: Record<string, LucideIcon> = {
+  turnout: Percent,
+  timeseries: ChartColumn,
+  candidates: Users,
+  seats: ArrowRightLeft,
+};
 
 // 領域の番号は大字で振る。数字よりも静かに並ぶ。
 const CATEGORY_NUMERALS = ["壱", "弐", "参", "肆", "伍", "陸"];
@@ -113,20 +128,32 @@ function MobileTitle() {
   );
 }
 
+/** 線幅 1 を non-scaling-stroke で画面画素に固定する。 */
+function LineIcon({ icon: Icon }: { icon: LucideIcon }) {
+  return (
+    <Icon
+      aria-hidden
+      strokeWidth={1}
+      nonScalingStroke
+      className="card-mark h-20 w-20 text-ink"
+    />
+  );
+}
+
+function CardMark({ slug }: { slug: string }) {
+  const Icon = MARKS[slug];
+  if (!Icon) return null;
+  return <LineIcon icon={Icon} />;
+}
+
 function ProjectCard({ entry }: { entry: CatalogEntry }) {
   const pending = entry.status === "pending" || entry.url === null;
   const body = (
     <div className={`flex flex-col gap-4 ${pending ? "opacity-40" : ""}`}>
-      <div className="card-art overflow-hidden">
-        <img
-          src={entry.art}
-          alt=""
-          width={320}
-          height={200}
-          loading="lazy"
-          decoding="async"
-          className="block h-full w-full object-contain transition-transform duration-300 ease-[var(--ease-out)] group-hover:scale-[1.03]"
-        />
+      <div className="card-art flex items-center justify-center overflow-hidden">
+        <span className="transition-transform duration-300 ease-[var(--ease-out)] group-hover:scale-[1.03]">
+          <CardMark slug={entry.slug} />
+        </span>
       </div>
       <p
         className={`font-serif text-[16px] leading-[1.7] font-medium tracking-[0.04em] ${LINK_TRANSITION} ${

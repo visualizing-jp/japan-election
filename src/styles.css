@@ -61,10 +61,16 @@
   }
 }
 
-/* A quiet plate behind each original line drawing keeps fine strokes readable. */
+/* 地色は線が読める程度に一段沈める。 */
 .card-art {
   aspect-ratio: 8 / 5;
   background: var(--color-plate);
+}
+
+/* vector-effect は継承されない。子の線まで、拡大後も画面上 1px に固定する。 */
+.card-mark,
+.card-mark * {
+  vector-effect: non-scaling-stroke;
 }
 
 .vertical {

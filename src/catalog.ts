@@ -18,7 +18,6 @@ export type CatalogEntry = {
   category: CategoryId;
   status: ProjectStatus;
   url: string | null;
-  art: string;
 };
 
 export const CATEGORIES: { id: CategoryId; label: string }[] = [
@@ -36,7 +35,6 @@ export const CATALOG: CatalogEntry[] = [
     category: "shugiin",
     status: "published",
     url: "https://election-shugiin-turnout.visualizing.jp/",
-    art: "/art/turnout.svg",
   },
   {
     slug: "timeseries",
@@ -46,7 +44,6 @@ export const CATALOG: CatalogEntry[] = [
     category: "shugiin",
     status: "published",
     url: "https://election-shugiin-timeseries.visualizing.jp/",
-    art: "/art/timeseries.svg",
   },
   {
     slug: "candidates",
@@ -56,7 +53,6 @@ export const CATALOG: CatalogEntry[] = [
     category: "shugiin",
     status: "published",
     url: "https://election-shugiin-candidates.visualizing.jp/",
-    art: "/art/candidates.svg",
   },
   {
     slug: "seats",
@@ -66,7 +62,6 @@ export const CATALOG: CatalogEntry[] = [
     category: "shugiin",
     status: "published",
     url: "https://election-shugiin-seats.visualizing.jp/",
-    art: "/art/seats.svg",
   },
 
   // —— 参議院 ——
@@ -78,7 +73,6 @@ export const CATALOG: CatalogEntry[] = [
     category: "sangiin",
     status: "published",
     url: "https://election-sangiin-turnout.visualizing.jp/",
-    art: "/art/turnout.svg",
   },
   {
     slug: "timeseries",
@@ -88,7 +82,6 @@ export const CATALOG: CatalogEntry[] = [
     category: "sangiin",
     status: "published",
     url: "https://election-sangiin-timeseries.visualizing.jp/",
-    art: "/art/timeseries.svg",
   },
   {
     slug: "candidates",
@@ -98,7 +91,6 @@ export const CATALOG: CatalogEntry[] = [
     category: "sangiin",
     status: "published",
     url: "https://election-sangiin-candidates.visualizing.jp/",
-    art: "/art/candidates.svg",
   },
   {
     slug: "seats",
@@ -108,6 +100,5 @@ export const CATALOG: CatalogEntry[] = [
     category: "sangiin",
     status: "published",
     url: "https://election-sangiin-seats.visualizing.jp/",
-    art: "/art/seats.svg",
   },
 ];
